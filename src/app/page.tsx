@@ -162,7 +162,7 @@ export default function Home() {
                 img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
               }
             ].map((project, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-3xl bg-slate-200 aspect-[4/5]">
+              <div key={i} className="group relative overflow-hidden rounded-3xl bg-slate-200 aspect-4/5">
                 <Image 
                   src={project.img} 
                   alt={project.title} 
