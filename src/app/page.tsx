@@ -89,6 +89,62 @@ export default function Home() {
           ))}
         </div>
       </section>
+      {/* --- HAKKIMIZDA (KURUMSAL) --- */}
+      <section id="kurumsal" className="py-24 bg-slate-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Sol: Görsel Alanı */}
+            <div className="relative group">
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                <Image 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
+                  alt="Hufeisen Office" 
+                  width={800}
+                  height={600}
+                  className="object-cover aspect-4/5 md:aspect-video lg:aspect-square"
+                />
+              </div>
+              {/* Dekoratif Arka Plan Objesi */}
+              <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl -z-10"></div>
+            </div>
+
+            {/* Sağ: Metin Alanı */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-3">Kurumsal</h2>
+                <h3 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                  Çeyrek Asırlık Mühendislik <br /> <span className="text-blue-600">Tecrübesi</span>
+                </h3>
+              </div>
+              
+              <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                Hufeisen Group olarak, temelimizdeki disiplin ve yenilikçi bakış açısıyla küresel çapta ikonik projeler inşa ediyoruz. Sadece yapılar değil, sürdürülebilir bir gelecek tasarlıyoruz.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { title: "Vizyonumuz", desc: "Küresel inşaat teknolojilerinde standartları belirleyen lider güç olmak." },
+                  { title: "Misyonumuz", desc: "En karmaşık mühendislik zorluklarını estetik ve güvenli çözümlerle aşmak." }
+                ].map((item, i) => (
+                  <div key={i} className="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                    <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
+                    <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-4">
+                <button className="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-blue-600 transition-colors shadow-lg">
+                  Detaylı Bilgi
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
     {/* --- HİZMETLER BÖLÜMÜ --- */}
 <section className="py-24 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
