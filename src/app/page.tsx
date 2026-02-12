@@ -130,6 +130,55 @@ export default function Home() {
     </div>
   </div>
 </section>
+{/* --- PROJELER (PORTFOLIO) --- */}
+      <section id="projeler" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+              <h2 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-3">Portfolyomuz</h2>
+              <p className="text-4xl font-black text-slate-900 tracking-tight">İkonik Yapılar, Güçlü Yarınlar</p>
+            </div>
+            <button className="text-blue-600 font-bold flex items-center gap-2 hover:gap-4 transition-all group">
+              Tüm Projeleri Gör 
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Hufeisen Tower",
+                category: "Ticari / Ofis",
+                img: "https://images.unsplash.com/photo-1470723710355-95304d8aece4?q=80&w=2070&auto=format&fit=crop"
+              },
+              {
+                title: "Vadi Konakları",
+                category: "Konut / Rezidans",
+                img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
+              },
+              {
+                title: "Teknoloji Kampüsü",
+                category: "Endüstriyel",
+                img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
+              }
+            ].map((project, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-3xl bg-slate-200 aspect-[4/5]">
+                <Image 
+                  src={project.img} 
+                  alt={project.title} 
+                  fill 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute bottom-0 left-0 p-8">
+                  <p className="text-blue-400 text-sm font-bold uppercase tracking-widest mb-2">{project.category}</p>
+                  <h4 className="text-2xl font-bold text-white">{project.title}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     {/* --- İLETİŞİM BÖLÜMÜ --- */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
